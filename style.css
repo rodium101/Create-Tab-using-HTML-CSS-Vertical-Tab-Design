@@ -1,0 +1,163 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Eczar', serif;
+  }
+
+  body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(34,4,17,1) 0%, rgba(2,27,6,1) 100%);
+    color: black;
+  }
+
+ .main{
+    max-width: 950px;
+    width: 100%;
+    margin: 0 20px;
+    background: #e9f0d1;
+    border-radius: 12px;
+    padding: 40px 50px 40px 40px;
+    box-shadow: 0 5px 10px rgba(238, 234, 234, 0.863);
+ }
+
+ .main .main-title{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.main .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .content .list{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 20%;
+  margin-right: 50px;
+}
+.content .list label{
+  height: 60px;
+  
+  /* background: red; */
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 60px;
+  cursor: pointer;
+  margin: 5px 0;
+  padding-left: 25px;
+  z-index: 12;
+  transition: all 0.41s ease;
+}
+
+.content .list label:hover{
+color: rgb(12, 12, 224);
+}
+
+.content .indica{
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(64, 64, 216);
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+#home:checked ~.list .indica{
+  top: 0;
+}
+#blog:checked ~.list .indica{
+  top: 70px;
+}
+#Contact:checked ~.list .indica{
+  top: 140px;
+}
+#code:checked ~.list .indica{
+  top: 210px;
+}
+#About:checked ~.list .indica{
+  top: 280px;
+}
+
+
+#home:checked ~.list .home,
+#blog:checked ~.list .blog,
+#Contact:checked ~.list .Contact,
+#code:checked ~.list .code,
+#About:checked ~.list .About{
+  color: #fff;
+}
+
+.main input[type="radio"]{
+  display: none;
+}
+
+.main .content .text-content{
+  width: 80%;
+  height: 100%;
+}
+
+.content .text-content p{
+  text-align: justify;
+}
+
+.content .text-content .home-title{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.content .text-content .blog-title{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.content .text-content .contact-title{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.content .text-content .code-title{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.content .text-content .about-title{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.content .text-content .text{
+display: none;
+}
+.content .text-content .home1 {
+  display: block;
+}
+
+#home:checked ~.text-content .home1,
+#blog:checked ~.text-content .blog1,
+#Contact:checked ~.text-content .contact1,
+#code:checked ~.text-content .code1,
+#About:checked ~.text-content .about1{
+  display: block;
+}
+
+#blog:checked ~.text-content .home1,
+#Contact:checked ~.text-content .home1,
+#code:checked ~.text-content .home1,
+#About:checked ~.text-content .home1{
+  display: none;
+}
